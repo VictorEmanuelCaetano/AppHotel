@@ -5,27 +5,17 @@
              BackgroundColor="#F4EFE6"
              Title="Hospedagem Contratada">
 
-    <VerticalStackLayout VerticalOptions="Center"
-                         Padding="20"
-                         Spacing="10">
+    <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="Center">
 
         <Label Text="Hospedagem Contratada!"
                FontFamily="PoppinsBold"
                FontSize="28"
-               HorizontalTextAlignment="Center"
-               TextColor="#1B3A4B" />
+               TextColor="#1B3A4B"
+               HorizontalOptions="Center" />
 
-        <Label Text="Olá! Seja bem vindo ao novo sistema de hospedagem, por favor, sinta-se livre para fazer um reserva!"
-               FontFamily="PoppinsRegular"
-               FontSize="16"
-               HorizontalTextAlignment="Center"
-               TextColor="#1B3A4B" />
+        <Label Text="Obrigado pela sua reserva!" HorizontalOptions="Center" />
 
-        <Button Text="Voltar"
-                FontFamily="PoppinsBold"
-                BackgroundColor="#1B3A4B"
-                TextColor="White"
-                Clicked="Button_Voltar_Clicked" />
+        <Button Text="Voltar" BackgroundColor="#1B3A4B" Clicked="Button_Voltar_Clicked" />
 
     </VerticalStackLayout>
 </ContentPage>

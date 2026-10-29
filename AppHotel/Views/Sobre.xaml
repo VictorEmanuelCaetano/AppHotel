@@ -5,56 +5,19 @@
              BackgroundColor="#F4EFE6"
              Title="Sobre">
 
-    <VerticalStackLayout VerticalOptions="Center"
-                         Padding="20"
-                         Spacing="15">
+    <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="Center">
 
-        <Label Text="Sobre o App"
+        <Label Text="Sobre"
                FontFamily="PoppinsBold"
                FontSize="32"
-               HorizontalTextAlignment="Center"
-               TextColor="#1B3A4B" />
+               TextColor="#1B3A4B"
+               HorizontalOptions="Center" />
 
-        <Border BackgroundColor="White"
-                Stroke="#C9A227"
-                StrokeThickness="2"
-                StrokeShape="RoundRectangle 15"
-                Padding="20">
+        <Label Text="App: App Meu Hotel" />
+        <Label Text="Desenvolvedor: Victor Emanuel Caetano" />
+        <Label Text="Ano: 2026" />
 
-            <VerticalStackLayout Spacing="10">
-
-                <Label Text="Nome do App:"
-                       FontFamily="PoppinsBold"
-                       TextColor="#C9A227" />
-                <Label Text="App Meu Hotel"
-                       FontFamily="PoppinsRegular" />
-
-                <Label Text="Desenvolvedor:"
-                       FontFamily="PoppinsBold"
-                       TextColor="#C9A227" />
-                <Label Text="Victor Emanuel Caetano"
-                       FontFamily="PoppinsRegular" />
-
-                <Label Text="Ano de Desenvolvimento:"
-                       FontFamily="PoppinsBold"
-                       TextColor="#C9A227" />
-                <Label Text="2026"
-                       FontFamily="PoppinsRegular" />
-
-                <Label Text="Descrição:"
-                       FontFamily="PoppinsBold"
-                       TextColor="#C9A227" />
-                <Label Text="Aplicativo feito em .NET MAUI para calcular o valor da hospedagem em um hotel."
-                       FontFamily="PoppinsRegular" />
-
-            </VerticalStackLayout>
-        </Border>
-
-        <Button Text="Voltar"
-                FontFamily="PoppinsBold"
-                BackgroundColor="#1B3A4B"
-                TextColor="White"
-                Clicked="Button_Voltar_Clicked" />
+        <Button Text="Voltar" BackgroundColor="#1B3A4B" Clicked="Button_Voltar_Clicked" />
 
     </VerticalStackLayout>
 </ContentPage>

@@ -6,147 +6,37 @@
              BackgroundColor="#F4EFE6"
              Title="ContratacaoDaHopedagem">
 
-    <ScrollView>
-        <VerticalStackLayout VerticalOptions="Center"
-                             Padding="15"
-                             Spacing="10">
+    <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="Center">
 
-            <!-- Titulo -->
-            <Label Text="Hotel Meu Hotel"
-                   FontFamily="PoppinsBold"
-                   FontSize="36"
-                   HorizontalTextAlignment="Center"
-                   TextColor="#1B3A4B" />
+        <Label Text="Cálculo da Diária"
+               FontFamily="PoppinsBold"
+               FontSize="32"
+               TextColor="#1B3A4B"
+               HorizontalOptions="Center" />
 
-            <Label Text="Cálculo da Diária"
-                   FontFamily="PoppinsRegular"
-                   FontSize="20"
-                   HorizontalTextAlignment="Center"
-                   TextColor="#C9A227" />
+        <Label Text="Adultos:" />
+        <Stepper x:Name="stp_adultos" Minimum="0" Maximum="10" />
 
-            <Border BackgroundColor="White"
-                    Stroke="#C9A227"
-                    StrokeThickness="2"
-                    StrokeShape="RoundRectangle 15"
-                    Padding="15">
+        <Label Text="Crianças:" />
+        <Stepper x:Name="stp_criancas" Minimum="0" Maximum="10" />
 
-                <VerticalStackLayout Spacing="10">
+        <Label Text="Escolha sua Suíte:" />
+        <Picker x:Name="pck_quarto" Title="Selecione">
+            <Picker.Items>
+                <x:String>Suíte Simples</x:String>
+                <x:String>Suíte Luxo</x:String>
+                <x:String>Suíte Presidencial</x:String>
+            </Picker.Items>
+        </Picker>
 
-                    <!-- Quantidade de hospedes -->
-                    <Grid RowDefinitions="Auto, Auto"
-                          ColumnDefinitions="*, *, 2*"
-                          RowSpacing="10">
+        <Label Text="Check-in:" />
+        <DatePicker x:Name="dtpck_checkin" Format="dd/MM/yyyy" />
 
-                        <Label Grid.Row="0" Grid.Column="0"
-                               Text="Adultos:"
-                               FontFamily="PoppinsRegular"
-                               VerticalTextAlignment="Center" />
+        <Label Text="Check-out:" />
+        <DatePicker x:Name="dtpck_checkout" Format="dd/MM/yyyy" />
 
-                        <Label Grid.Row="0" Grid.Column="1"
-                               Text="{Binding Value}"
-                               BindingContext="{x:Reference stp_adultos}"
-                               FontFamily="PoppinsBold"
-                               TextColor="#1B3A4B"
-                               HorizontalTextAlignment="Center"
-                               VerticalTextAlignment="Center" />
+        <Button Text="Avançar" BackgroundColor="#1B3A4B" Clicked="Button_Avancar_Clicked" />
+        <Button Text="Sobre" BackgroundColor="#C9A227" Clicked="Button_Sobre_Clicked" />
 
-                        <Stepper Grid.Row="0" Grid.Column="2"
-                                 x:Name="stp_adultos"
-                                 Minimum="0"
-                                 Maximum="10"
-                                 Increment="1" />
-
-                        <Label Grid.Row="1" Grid.Column="0"
-                               Text="Crianças:"
-                               FontFamily="PoppinsRegular"
-                               VerticalTextAlignment="Center" />
-
-                        <Label Grid.Row="1" Grid.Column="1"
-                               Text="{Binding Value}"
-                               BindingContext="{x:Reference stp_criancas}"
-                               FontFamily="PoppinsBold"
-                               TextColor="#1B3A4B"
-                               HorizontalTextAlignment="Center"
-                               VerticalTextAlignment="Center" />
-
-                        <Stepper Grid.Row="1" Grid.Column="2"
-                                 x:Name="stp_criancas"
-                                 Minimum="0"
-                                 Maximum="10"
-                                 Increment="1" />
-                    </Grid>
-
-                    <!-- Escolha da suite -->
-                    <Border Stroke="#E0D6C2"
-                            StrokeShape="RoundRectangle 10"
-                            Padding="10">
-                        <VerticalStackLayout>
-
-                            <Label Text="Escolha sua Suíte"
-                                   TextTransform="Uppercase"
-                                   FontFamily="PoppinsBold"
-                                   FontSize="16"
-                                   HorizontalTextAlignment="Center"
-                                   TextColor="#1B3A4B" />
-
-                            <Picker x:Name="pck_quarto"
-                                    Title="Selecione sua Acomodação">
-                                <Picker.Items>
-                                    <x:String>Suíte Simples</x:String>
-                                    <x:String>Suíte Luxo</x:String>
-                                    <x:String>Suíte Presidencial</x:String>
-                                </Picker.Items>
-                            </Picker>
-                        </VerticalStackLayout>
-                    </Border>
-
-                    <!-- Periodo da estadia -->
-                    <Border Stroke="#E0D6C2"
-                            StrokeShape="RoundRectangle 10"
-                            Padding="10">
-                        <VerticalStackLayout Spacing="10">
-
-                            <Label Text="Período da Estadia"
-                                   TextTransform="Uppercase"
-                                   FontFamily="PoppinsBold"
-                                   FontSize="16"
-                                   HorizontalTextAlignment="Center"
-                                   TextColor="#1B3A4B" />
-
-                            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-                                <Label Text="Check-in:"
-                                       FontFamily="PoppinsRegular"
-                                       VerticalTextAlignment="Center" />
-                                <DatePicker x:Name="dtpck_checkin"
-                                            Format="dd/MM/yyyy" />
-                            </HorizontalStackLayout>
-
-                            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-                                <Label Text="Check-out:"
-                                       FontFamily="PoppinsRegular"
-                                       VerticalTextAlignment="Center" />
-                                <DatePicker x:Name="dtpck_checkout"
-                                            Format="dd/MM/yyyy" />
-                            </HorizontalStackLayout>
-                        </VerticalStackLayout>
-                    </Border>
-
-                    <Button Text="Avançar"
-                            FontFamily="PoppinsBold"
-                            BackgroundColor="#1B3A4B"
-                            TextColor="White"
-                            Clicked="Button_Avancar_Clicked" />
-
-                    <Button Text="Sobre"
-                            FontFamily="PoppinsBold"
-                            BackgroundColor="#C9A227"
-                            TextColor="White"
-                            Clicked="Button_Sobre_Clicked" />
-
-                </VerticalStackLayout>
-            </Border>
-
-        </VerticalStackLayout>
-    </ScrollView>
-
+    </VerticalStackLayout>
 </ContentPage>

@@ -5,6 +5,9 @@ namespace AppHotel
         public App()
         {
             InitializeComponent();
+
+            // deixa o app sempre no tema claro
+            UserAppTheme = AppTheme.Light;
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
