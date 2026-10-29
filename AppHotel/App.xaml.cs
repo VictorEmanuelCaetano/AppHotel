@@ -1,6 +1,3 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Maui.Animations;
-
 namespace AppHotel
 {
     public partial class App : Application
@@ -12,7 +9,7 @@ namespace AppHotel
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell())
+            return new Window(new NavigationPage(new Views.ContratacaoDaHopedagem()))
             {
                 Width = 600,
                 Height = 800,

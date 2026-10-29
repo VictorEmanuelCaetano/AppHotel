@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.HospedagemContratada"
+             BackgroundColor="#F4EFE6"
+             Title="Hospedagem Contratada">
+
+    <VerticalStackLayout VerticalOptions="Center"
+                         Padding="20"
+                         Spacing="10">
+
+        <Label Text="Hospedagem Contratada!"
+               FontFamily="PoppinsBold"
+               FontSize="28"
+               HorizontalTextAlignment="Center"
+               TextColor="#1B3A4B" />
+
+        <Label Text="Olá! Seja bem vindo ao novo sistema de hospedagem, por favor, sinta-se livre para fazer um reserva!"
+               FontFamily="PoppinsRegular"
+               FontSize="16"
+               HorizontalTextAlignment="Center"
+               TextColor="#1B3A4B" />
+
+        <Button Text="Voltar"
+                FontFamily="PoppinsBold"
+                BackgroundColor="#1B3A4B"
+                TextColor="White"
+                Clicked="Button_Voltar_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

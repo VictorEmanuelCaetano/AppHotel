@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppHotel.Views.Sobre"
+             BackgroundColor="#F4EFE6"
+             Title="Sobre">
+
+    <VerticalStackLayout VerticalOptions="Center"
+                         Padding="20"
+                         Spacing="15">
+
+        <Label Text="Sobre o App"
+               FontFamily="PoppinsBold"
+               FontSize="32"
+               HorizontalTextAlignment="Center"
+               TextColor="#1B3A4B" />
+
+        <Border BackgroundColor="White"
+                Stroke="#C9A227"
+                StrokeThickness="2"
+                StrokeShape="RoundRectangle 15"
+                Padding="20">
+
+            <VerticalStackLayout Spacing="10">
+
+                <Label Text="Nome do App:"
+                       FontFamily="PoppinsBold"
+                       TextColor="#C9A227" />
+                <Label Text="App Meu Hotel"
+                       FontFamily="PoppinsRegular" />
+
+                <Label Text="Desenvolvedor:"
+                       FontFamily="PoppinsBold"
+                       TextColor="#C9A227" />
+                <Label Text="Victor Emanuel Caetano"
+                       FontFamily="PoppinsRegular" />
+
+                <Label Text="Ano de Desenvolvimento:"
+                       FontFamily="PoppinsBold"
+                       TextColor="#C9A227" />
+                <Label Text="2026"
+                       FontFamily="PoppinsRegular" />
+
+                <Label Text="Descrição:"
+                       FontFamily="PoppinsBold"
+                       TextColor="#C9A227" />
+                <Label Text="Aplicativo feito em .NET MAUI para calcular o valor da hospedagem em um hotel."
+                       FontFamily="PoppinsRegular" />
+
+            </VerticalStackLayout>
+        </Border>
+
+        <Button Text="Voltar"
+                FontFamily="PoppinsBold"
+                BackgroundColor="#1B3A4B"
+                TextColor="White"
+                Clicked="Button_Voltar_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
